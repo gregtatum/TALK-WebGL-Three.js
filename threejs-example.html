@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple Example ThreeJS</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #f0f0f0;
+				margin: 0px;
+				overflow: hidden;
+			}
+			#material {
+				bottom:5px;
+				left:5px;
+				position:absolute;
+			}
+		</style>
+		
+		<script src='http://codeorigin.jquery.com/jquery-1.10.2.min.js'></script>
+		<script src="src/three.min.js"></script>
+		<script src="src/OrbitControls.js"></script> <!-- include some controls -->
+		<script src='threejs-example.js'></script>
+	</head>
+	<body>
+		<div id='clean'></div>
+		<select id='material'>
+			<option>MeshBasicMaterial</option>
+			<option>MeshLambertMaterial</option>
+			<option>MeshPhongMaterial</option>
+			<option>MeshNormalMaterial</option>
+			<option>MeshDepthMaterial</option>
+			<!-- <option>MeshFaceMaterial</option> -->
+		</select>
+	</body>
+</html>
