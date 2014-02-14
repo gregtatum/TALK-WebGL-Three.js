@@ -1,13 +1,13 @@
 TulsaWebDevs - 3d in the Browser
 ===================================
 
-Here are the assets for my talk. Links to what I'm talking about are below as well.
+Here are the assets for my talk. Links from the presentation are below.
 
 ### Three.js
-- (http://threejs.org)
-- (http://threejs.org/docs)
-- (http://threejs.org/examples)
-- (http://github.com/mrdoob/three.js)
+- http://threejs.org
+- http://threejs.org/docs
+- http://threejs.org/examples
+- http://github.com/mrdoob/three.js
 
 ### Demos
 - [Mapping Small Arms and Ammunition](http://workshop.chromeexperiments.com/projects/armsglobe/)
