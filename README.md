@@ -9,6 +9,9 @@ Here are the assets for my talk. Links from the presentation are below.
 - http://threejs.org/examples
 - http://github.com/mrdoob/three.js
 
+### WebGL
+- [The Specification](http://www.khronos.org/registry/webgl/specs/latest/1.0/)
+
 ### Demos
 - [Mapping Small Arms and Ammunition](http://workshop.chromeexperiments.com/projects/armsglobe/)
 - [Visualizing World Population](http://data-arts.appspot.com/globe/)
@@ -18,4 +21,4 @@ Here are the assets for my talk. Links from the presentation are below.
 
 ### What I'm working on
 - [EvolveJS](http://evolvejs.com/)
-- [Source Code](https://github.com/tatumcreative/evolvejs)
+- [EvolveJS on GitHub](https://github.com/tatumcreative/evolvejs)
