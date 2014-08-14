@@ -1,5 +1,6 @@
 3d in the Browser
 ===================================
+##Canvas, WebGL, and Three.js
 
 Here are the assets for my talk. Links from the presentation are below.
 
@@ -17,8 +18,12 @@ Here are the assets for my talk. Links from the presentation are below.
 - [Visualizing World Population](http://data-arts.appspot.com/globe/)
 - [3d Car Visualizer](http://carvisualizer.plus360degrees.com/threejs/)
 - [Digital Landscapes](www.littleworkshop.fr/landscapes)
+- [Old Brewery Apartment](http://www.shapespark.com/formikodesign/old-brewery-apartment/)
 - [Find Your Way To Oz](www.findyourwaytooz.com/storm/) ([Source Code](https://code.google.com/p/oz-experiment/))
 
 ### What I'm working on
 - [EvolveJS](http://evolvejs.com/)
 - [EvolveJS on GitHub](https://github.com/tatumcreative/evolvejs)
+- [Recursivity - Drawing 3d Trees](http://gregtatum.com/poems/recursive/5/)
+- [Recursivity on GitHub](https://github.com/TatumCreative/Recursivity)
+
