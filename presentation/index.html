@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>3d in the Browser - WebGL and Three.js</title>
+
+		<meta name="description" content="A talk on the technologies for doing 3d in the browser.">
+		<meta name="author" content="Greg Tatum">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" a target='_blank' href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+		
+		<style>
+			.reveal p {
+				margin: 1.3em 0;
+			}
+			ul.spread-out li {
+				margin: 0.8em 0;
+			}
+			img.overlay-image {
+				position:absolute;
+				top:0;
+				left:0;
+				border:0 !important;
+				box-shadow:none !important;
+			}
+				
+		</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					
+					
+					<canvas id='intro' width='250' height='250' style='
+						max-width:250px;
+						max-height:250px;
+					'></canvas>
+					
+					<h1>3d in the Browser</h1>
+					<h3>Canvas, WebGL, and Three.js</h3>
+					
+					<hr/>
+					<p>
+						<small>
+							Greg Tatum &nbsp; / &nbsp;
+							<a target='_blank' href="http://gregtatum.com/">gregtatum.com</a> &nbsp; / &nbsp; 
+							<a target='_blank' href="http://twitter.com/TatumCreative/">@TatumCreative</a>
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>What is WebGL?</h2>
+					<p class="fragment roll-in">
+						A new web standard to leverage the power of the graphics card to draw crazy stuff in the browser.
+					</p>
+					<p class="fragment roll-in">
+						WebGL brings the <a href='http://apps.playcanvas.com/will/doom3/gangnamstyle' target='_blank'>power of 3d to the web</a>.
+					</p>
+				</section>
+				
+				<section>
+					
+					<!-- add this just to position it -->
+					<img src='images/queen.jpg' style='opacity:0;'>
+					<!-- add this just to position it -->
+					
+					<img class="overlay-image" src='images/queen.jpg'>
+					<img class="overlay-image fragment fade-in" src='images/queen1.jpg'>
+					<img class="overlay-image fragment fade-in" src='images/queen2.jpg'>
+					
+				</section>
+				
+				<section>
+					<h2>How To Think About WebGL</h2>
+					<p class="fragment roll-in">
+						The control code for WebGL is written in <strong>JavaScript</strong>.
+					</p>
+					<p class="fragment roll-in">
+						The shading is handled by compiled <strong>shader code</strong>. written in <strong>GLSL</strong>
+						(based on the syntax of <strong>C</strong>)
+					</p>
+				</section>
+
+				<section>
+					<h2>What is &lt;canvas&gt;?</h2>
+					<p class="fragment roll-in">
+						The canvas element lets you draw on a <strong>bitmap image right within the browser</strong>
+						without effecting any other DOM elements or causing re-paints.
+					</p>
+					<p class="fragment roll-in">
+						You can render in both <strong>2d and 3d</strong> on canvas using the standard 2d context, or
+						the WebGL context (where supported).
+					</p>
+					<p class="fragment roll-in">
+						<strong>Browser events are limited</strong>, so user interaction can be a bit trickier compared
+						to SVG drawing, which does effect the DOM.
+					</p>
+				</section>
+				
+				<section>
+					<h2>What is Three.js?</h2>
+					<p class="fragment roll-in">
+						An open source javascript 3d library that can render scenes using a variety of technologies including WebGL.
+					</p>
+					<p class="fragment roll-in">
+						It gets rid of a lot of the pain and technical know-how of interacting with a WebGL context.
+					</p>
+					<ul class="fragment roll-in">
+						<li><a target='_blank' href='http://threejs.org/'>threejs.org</a></li>
+						<li><a target='_blank' href='http://threejs.org/docs/'>threejs.org/docs</a></li>
+						<li><a target='_blank' href='http://threejs.org/examples/'>threejs.org/examples</a></li>
+						<li><a target='_blank' href='http://threejs.org/mrdoob/three.js'>github.com/mrdoob/three.js</a></li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Demos</h2>
+					<ul class='spread-out'>
+						<li><a target='_blank' href='http://workshop.chromeexperiments.com/projects/armsglobe/'>Mapping Small Arms and Ammunition</a></li>
+						<li><a target='_blank' href='http://data-arts.appspot.com/globe/'>Visualizing World Population</a></li>
+						<li><a target='_blank' href='http://carvisualizer.plus360degrees.com/threejs/'>3d Car Visualizer</a></li>
+						<li><a target='_blank' href='http://www.littleworkshop.fr/landscapes'>Digital Landscapes</a></li>
+						<li><a target='_blank' href='http://www.shapespark.com/formikodesign/old-brewery-apartment/'>Old Brewery Apartment</a></li>
+						<li>
+							<a target='_blank' href='http://www.findyourwaytooz.com/storm/'>Find Your Way To Oz</a><br/>
+							<small>
+								Source Code: <a target='_blank' href='https://code.google.com/p/oz-experiment/'>https://code.google.com/p/oz-experiment/</a>
+							</small>
+						</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Can I Use &lt;canvas&gt;?</h2>
+					<p>
+						<a target='_blank' href='http://caniuse.com/canvas'><img src='images/can-i-use-canvas.png' alt='Can I Use Canvas Screenshot'/></a>
+					<p>
+						<small>
+							IE8 - <a target='_blank' href='http://flashcanvas.net/'>http://flashcanvas.net/</a>
+						</small>
+					</p>
+				</section>
+				
+				<section>
+					<h2>Can I Use WebGL?</h2>
+					<p>
+						<a target='_blank' href='http://caniuse.com/webgl'><img src='images/can-i-use-webgl.png' alt='Can I Use Canvas Screenshot'/></a>
+					<p>
+						<small>
+							IE8 - fuggedaboutit
+						</small>
+					</p>
+				</section>
+				
+				<section>
+					<h3>Drawing in 3d</h3>
+					<h1>The hard way</h1>
+					<p><a target='_blank' href='../webgl-example.html'>Working with a WebGL context</a></p>
+				</section>
+				
+
+				<section>
+					<h2>Typed Data in JavaScript</h2>
+					<pre><code data-trim contenteditable>
+//Create a buffer of 16 bytes
+var buffer = new ArrayBuffer(16);
+
+//ArrayBuffer with a Float32 view
+var floats = new Float32Array(4); //16 bytes
+
+// [0, 0, 0, 0]
+
+floats[1];              // 0
+
+floats[1] = 5745.55;    //5745.55
+
+floats[2] = "67";       //67
+
+floats;                 //[0, 5745.5498046875, 67, 0]
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>ArrayBuffer Views</h2>
+					<img src='images/buffer-types.png'>
+				</section>
+				
+				<section>
+					<h2>Shaders</h2>
+					<h3>Vertex Shader</h3>
+					<pre>
+						<code data-trim contenteditable>
+void main() {
+    gl_Position = projectionMatrix *
+                  modelViewMatrix *
+                  vec4(position,1.0);
+}
+						</code>
+					</pre>
+					<p>
+						<small>
+							<a href='http://www.html5rocks.com/en/tutorials/webgl/shaders/' target='_blank'>
+								A tutorial on shaders
+							</a>
+						</small>
+					</p>
+				</section>
+				
+				<section>
+					<h2>Shaders</h2>
+					<h3>Fragment Shader</h3>
+					<pre>
+						<code data-trim contenteditable>
+void main() {
+    gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);
+}
+						</code>
+					</pre>
+					<p>
+						<small>
+							<a href='http://www.html5rocks.com/en/tutorials/webgl/shaders/' target='_blank'>
+								A tutorial on shaders
+							</a>
+						</small>
+					</p>
+				</section>
+				
+				<section>
+					<h3>Drawing in 3d</h3>
+					<h1>The easier way</h1>
+					<p><a target='_blank' href='../threejs-example.html'>Working with a Three.js</a></p>
+				</section>
+				
+				<section>
+					
+					<!-- add this just to position it -->
+					<img src='images/scene-01.svg' style='opacity:0;'>
+					<!-- add this just to position it -->
+					
+					<img class='overlay-image' src='images/scene-04.svg'>
+					<img class="overlay-image fragment fade-in" src='images/scene-01.svg'>
+					<img class="overlay-image fragment fade-in" src='images/scene-02.svg'>
+					<img class="overlay-image fragment fade-in" src='images/scene-03.svg'>
+					
+				</section>
+				
+				<section>
+					<h2>A peek at what I'm working on</h2>
+					<ul class='spread-out'>
+						<li><a target='_blank' href='http://evolvejs.com/'>EvolveJS.com</a></li>
+						<li><a target='_blank' href='http://gregtatum.com/poems/recursive/5/'>Recursivity - Drawing 3d Trees</a></li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Helpful Links</h2>
+					<ul class='spread-out'>
+						<li>Three.js the code &mdash; <a target='_blank' href='https://github.com/mrdoob/three.js'>github.com/mrdoob/three.js</a></li>
+						<li>Three.js the site &mdash; <a target='_blank' href='http://threejs.org'>threejs.org</a></li>
+						<li>WebGL Spec &mdash; <a target='_blank' href='http://www.khronos.org/registry/webgl/specs/latest/1.0/'>khronos.org/registry/webgl/specs/latest/1.0/</a>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>The Future</h2>
+					<p>Graphics card leveraged rendering – the <strong>browser</strong> vs <strong>native environments</strong></p>
+				</section>
+				
+				<section>
+					<h2>Imagine Some Applications</h2>
+					<ul class='spread-out'>
+						<li>3d visualization of open data</li>
+						<li>WebSockets for realtime interaction</li>
+						<li>Universal gaming not tied to an app store</li>
+						<li>GPGPU - Super computing in the browser</li>
+						<li>What other distributed collaborative networks can be created?</li>
+					</ul>
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="../src/three.min.js"></script>
+		<script src="js/graphic.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,4 +1,4 @@
-TulsaWebDevs - 3d in the Browser
+3d in the Browser
 ===================================
 
 Here are the assets for my talk. Links from the presentation are below.
