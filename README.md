@@ -1,8 +1,11 @@
 3d in the Browser
 ===================================
-##Canvas, WebGL, and Three.js
 
-Here are the assets for my talk. Links from the presentation are below.
+Canvas, WebGL, and Three.js
+
+###[View the presentation slides here.](http://gregtatum.com/talks/webgl/presentation/)
+
+Links from the presentation are below.
 
 ### Three.js
 - http://threejs.org
