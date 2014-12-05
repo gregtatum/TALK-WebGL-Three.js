@@ -13,20 +13,25 @@ var ExampleScene = function() {
 	this.addRenderer();
 	this.addControls();
 	this.addLights();
+	this.addGrid();
+	
 	//this.addSpheresBasic();
 	this.addSpheresWithMaterial( selectedMaterial );
 	//this.addGeometry();
-	this.addGrid();
+	
 	this.addEventListeners();
 	
 	this.loop();
 };
+	
+//https://github.com/TatumCreative/TALK-WebGL-Three.js
 		
 ExampleScene.prototype = {
 	
 	addLights : function() {
+		
 		this.lights = [];
-		this.lights[0] = new THREE.AmbientLight( 0xffffff );
+		this.lights[0] = new THREE.AmbientLight( 0xff0000 );
 		this.lights[1] = new THREE.PointLight( 0xffffff, 1, 0 );
 		this.lights[2] = new THREE.PointLight( 0xffffff, 1, 0 );
 		this.lights[3] = new THREE.PointLight( 0xffffff, 1, 0 );
@@ -39,6 +44,7 @@ ExampleScene.prototype = {
 		this.scene.add( this.lights[1] );
 		this.scene.add( this.lights[2] );
 		this.scene.add( this.lights[3] );
+		
 	},
 			
 	addGeometry : function() {
@@ -90,7 +96,9 @@ ExampleScene.prototype = {
 	},
 	
 	addRenderer : function() {
-		this.renderer = new THREE.WebGLRenderer();
+		this.renderer = new THREE.WebGLRenderer({
+			alpha : true
+		});
 		this.renderer.setSize( window.innerWidth, window.innerHeight );
 		this.div.appendChild( this.renderer.domElement );
 	},

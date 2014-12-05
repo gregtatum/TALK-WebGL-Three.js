@@ -79,6 +79,17 @@
 						</small>
 					</p>
 				</section>
+				
+				
+				<section>
+					<h2>Follow along</h2>
+					
+					<p><a target='_blank' href="https://github.com/TatumCreative/TALK-WebGL-Three.js/">github.com/TatumCreative/TALK-WebGL-Three.js</a></p>
+					<p><a target='_blank' href="https://gregtatum.com/talks/webgl/">gregtatum.com/talks/webgl</a></p>
+					
+				</section>
+				
+				
 
 				<section>
 					<h2>What is WebGL?</h2>
@@ -166,6 +177,7 @@
 					<h2>Can I Use &lt;canvas&gt;?</h2>
 					<p>
 						<a target='_blank' href='http://caniuse.com/canvas'><img src='images/can-i-use-canvas.png' alt='Can I Use Canvas Screenshot'/></a>
+						<img src='images/can-i-use-table.png'/>
 					<p>
 						<small>
 							IE8 - <a target='_blank' href='http://flashcanvas.net/'>http://flashcanvas.net/</a>
@@ -177,19 +189,13 @@
 					<h2>Can I Use WebGL?</h2>
 					<p>
 						<a target='_blank' href='http://caniuse.com/webgl'><img src='images/can-i-use-webgl.png' alt='Can I Use Canvas Screenshot'/></a>
+						<img src='images/can-i-use-table.png'/>
 					<p>
 						<small>
 							IE8 - fuggedaboutit
 						</small>
 					</p>
 				</section>
-				
-				<section>
-					<h3>Drawing in 3d</h3>
-					<h1>The hard way</h1>
-					<p><a target='_blank' href='../webgl-example.html'>Working with a WebGL context</a></p>
-				</section>
-				
 
 				<section>
 					<h2>Typed Data in JavaScript</h2>
@@ -218,17 +224,21 @@ floats;                 //[0, 5745.5498046875, 67, 0]
 				</section>
 				
 				<section>
+					<h3>Drawing in 3d</h3>
+					<h1>The hard way</h1>
+					<p><a target='_blank' href='../webgl-example.html'>Working with a WebGL context</a></p>
+				</section>
+				
+				<section>
 					<h2>Shaders</h2>
 					<h3>Vertex Shader</h3>
-					<pre>
-						<code data-trim contenteditable>
+					<pre><code data-trim contenteditable>
 void main() {
     gl_Position = projectionMatrix *
                   modelViewMatrix *
                   vec4(position,1.0);
 }
-						</code>
-					</pre>
+					</code></pre>
 					<p>
 						<small>
 							<a href='http://www.html5rocks.com/en/tutorials/webgl/shaders/' target='_blank'>
@@ -241,13 +251,11 @@ void main() {
 				<section>
 					<h2>Shaders</h2>
 					<h3>Fragment Shader</h3>
-					<pre>
-						<code data-trim contenteditable>
+					<pre><code data-trim contenteditable>
 void main() {
     gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);
 }
-						</code>
-					</pre>
+					</code></pre>
 					<p>
 						<small>
 							<a href='http://www.html5rocks.com/en/tutorials/webgl/shaders/' target='_blank'>
@@ -259,8 +267,8 @@ void main() {
 				
 				<section>
 					<h3>Drawing in 3d</h3>
-					<h1>The easier way</h1>
-					<p><a target='_blank' href='../threejs-example.html'>Working with a Three.js</a></p>
+					<h1>The easy way</h1>
+					<p><a target='_blank' href='../threejs-helloworld.html'>Hello Cube</a></p>
 				</section>
 				
 				<section>
@@ -277,19 +285,50 @@ void main() {
 				</section>
 				
 				<section>
+					<h2>More Three.js Code</h2>
+					<p><a target='_blank' href='../threejs-example.html'>Working with Three.js</a></p>
+				</section>
+				
+				<section>
 					<h2>A peek at what I'm working on</h2>
 					<ul class='spread-out'>
 						<li><a target='_blank' href='http://evolvejs.com/'>EvolveJS.com</a></li>
 						<li><a target='_blank' href='http://gregtatum.com/poems/recursive/5/'>Recursivity - Drawing 3d Trees</a></li>
+						<li><a target='_blank' href='http://gregtatum.com/sandbox/#carbonDioxideEarth'>Carbon Dioxide Earth</a></li>
+						<li><a target='_blank' href='http://gregtatum.com/sandbox/#sineGravityCloud'>Sine Gravity Cloud</a></li>
 					</ul>
 				</section>
 				
+				<!--
 				<section>
 					<h2>Helpful Links</h2>
 					<ul class='spread-out'>
 						<li>Three.js the code &mdash; <a target='_blank' href='https://github.com/mrdoob/three.js'>github.com/mrdoob/three.js</a></li>
 						<li>Three.js the site &mdash; <a target='_blank' href='http://threejs.org'>threejs.org</a></li>
 						<li>WebGL Spec &mdash; <a target='_blank' href='http://www.khronos.org/registry/webgl/specs/latest/1.0/'>khronos.org/registry/webgl/specs/latest/1.0/</a>
+					</ul>
+				</section> -->
+				
+				<section>
+					<h2>My Three.js Sandbox</h2>
+					<p><a href='https://github.com/TatumCreative/sandbox'>github.com/TatumCreative/sandbox</a></p>
+					<ul>
+						<li>Browserify + Gulp</li>
+						<li>Declarative scenes</li>
+						<li>Reusable components</li>
+						<li>Scene selector</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Other WebGL Projects</h2>
+					<ul class='spread-out'>
+						<li><a href='http://www.babylonjs.com/'>Babylon.js</a> - Competing open source 3d engine</li>
+						<li><a href='http://unity3d.com/5'>Unity 5</a> - Coming soon, WebGL target</li>
+						<li><a href='http://stack.gl/'>stackgl</a> - Modularized WebGL environment (npm + Browserify)</li>
+						<li><a href='https://github.com/stackgl/glslify'>glsify</a> - Modularized shaders!</li>
+						<li><a href='http://www.pixijs.com/'>pixi.js</a> - 2d WebGL - FAST</li>
+						<li><a href='http://phaser.io/'>Phaser</a> - 2d Game Framework using pixi.js</li>
 					</ul>
 				</section>
 				
